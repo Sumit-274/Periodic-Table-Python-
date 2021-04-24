@@ -20,13 +20,21 @@ perDict = {"Hydrogen":"Symbol: H\nElement Number: 01 \nNumber Of Protons/Electro
            "Calcium":"Symbol: Ca\nElement Number: 20\nNumber Of Protons/Electrons: 20\nNumber Of Neutrons: 20\nDistribution Of Electrons: 2, 8, 8, 2",
            "Scandium":"Symbol: Sc\nElement Number: 21\nNumber of Protons/Electrons: 21\nNumber of Neutrons:21\nDistribution of Electrons: 2, 8, 9, 2",
            }
-print("NOTE:-- Note That The Element Name's First Alphabet I Must Be Capital")
 def func():
-    itP = input("Please Enter The Element Name ")
-    print(perDict[itP])
-func()
-pk = input("You Want To Exit?(Y/N)")
-if pk=='y' or 'Y':
-    pass
-else:
-    print("You Have To Exit")
+           inp = input("Enter the element name")
+           inp.lower()
+           inp.capitalize()
+           if inp == perDict[inp]:
+                      print(perDict[inp])
+                      
+           else:
+                      return f"Sorry this Compound {inp} is not correct written Please check the Word"
+       
+if __name__ == "__main__":
+           while True:
+                      func()       
+                      pk = input("You Want To Exit?(Y/N)")
+                      if pk=='y' or 'Y':
+                          break
+                      else:
+                                 continue
